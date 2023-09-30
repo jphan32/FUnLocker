@@ -5,14 +5,16 @@ description = ""
 authors = ["Sangjoon Han <jphan32@me.com>"]
 license = "MIT License"
 readme = "README.md"
+repository = "https://github.com/jphan32/FUnLocker"
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13"
+python = ">=3.9,<3.13"
 pillow = "^10.0.1"
 opencv-python = "^4.8.1.78"
 opencv-contrib-python = "^4.8.1.78"
-tflite-runtime = "^2.13.0"
 scipy = "^1.11.3"
+tflite-runtime = { url = "https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_aarch64.whl" }
+pycoral = { url = "https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_aarch64.whl" }
 
 [build-system]
 requires = ["poetry-core"]
