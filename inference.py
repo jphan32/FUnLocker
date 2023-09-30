@@ -1,6 +1,6 @@
 import platform
 
-import tensorflow as tf
+#import tensorflow as tf
 import tflite_runtime.interpreter as tflite
 
 from postprocessing import *
@@ -35,7 +35,8 @@ class FaceDetector():
         try:
             self.interpreter = tflite.Interpreter(model_path=model_dir, experimental_delegates=[tflite.load_delegate(EDGETPU_SHARED_LIB)])
         except:
-            self.interpreter = tf.compat.v1.lite.Interpreter(model_path="Mobilefacenet/pretrained_model/training_model/ulffd_landmark.tflite")
+            pass
+            #self.interpreter = tf.compat.v1.lite.Interpreter(model_path="Mobilefacenet/pretrained_model/training_model/ulffd_landmark.tflite")
         self.interpreter.allocate_tensors()
         self.input_index = self.interpreter.get_input_details()[0]['index']
         self.bbox_index = self.interpreter.get_output_details()[0]['index']

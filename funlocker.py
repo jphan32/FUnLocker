@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import cv2
 from PIL import Image as Img
 from PIL import ImageTk
@@ -8,7 +6,7 @@ from cv2 import transform
 from tkinter import *
 import tkinter.font as tkFont
 
-import tensorflow as tf
+#import tensorflow as tf
 import tflite_runtime.interpreter as tflite
 
 from inference import *

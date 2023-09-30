@@ -7,9 +7,12 @@ license = "MIT License"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-opencv-contrib-python = "^4.8.1.78"
+python = ">=3.10,<3.13"
 pillow = "^10.0.1"
+opencv-python = "^4.8.1.78"
+opencv-contrib-python = "^4.8.1.78"
+tflite-runtime = "^2.13.0"
+scipy = "^1.11.3"
 
 [build-system]
 requires = ["poetry-core"]
