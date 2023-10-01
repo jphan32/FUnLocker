@@ -34,7 +34,8 @@ class FaceDetector():
             image_size = [320, 240]
         try:
             self.interpreter = tflite.Interpreter(model_path=model_dir, experimental_delegates=[tflite.load_delegate(EDGETPU_SHARED_LIB)])
-        except:
+        except Exception as e:
+            print("Error:", e)
             pass
             #self.interpreter = tf.compat.v1.lite.Interpreter(model_path="Mobilefacenet/pretrained_model/training_model/ulffd_landmark.tflite")
         self.interpreter.allocate_tensors()

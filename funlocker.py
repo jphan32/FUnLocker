@@ -108,9 +108,12 @@ class MainWindow:
         self.reflect_status()
 
         # COMMON [mode_state : STATE_VIEW,...]
-        src_image = cv2.flip(self.cap.read()[1], 1)  # flip the camera
-        dst_image = cv2.cvtColor(src_image, cv2.COLOR_BGR2RGB)
+        #src_image = cv2.flip(self.cap.read()[1], 1)  # flip the camera
+        #dst_image = cv2.cvtColor(src_image, cv2.COLOR_BGR2RGB)
         
+        src_image = cv2.imread("test.jpg")
+        dst_image = cv2.cvtColor(src_image, cv2.COLOR_BGR2RGB)
+
         # COMMON [mode_state : STATE_DETECT_ONLY, STATE_CAPTURE, STATE_RECOGNITION]
         if mode_state:
             rgb_img = cv2.resize(src_image, (WIDTH, HEIGHT))  # resize the images
